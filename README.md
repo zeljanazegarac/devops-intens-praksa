@@ -21,4 +21,4 @@ NAPOMENA:
 
 Resenje poslednjeg zahteva:
 
-U datoteci .github u workflows datoteci nalaze se dva fajla. U prvom fajlu "CI-CD" je napisana prva skripta, a u drugom fajlu "CI-CD-2" je napisana druga skripta.
+U datoteci .github u workflows datoteci nalaze se dva fajla. U prvom fajlu "CI-CD" je implementirana prva skripta, a u drugom fajlu "CI-CD-2" je implementirana druga skripta.
