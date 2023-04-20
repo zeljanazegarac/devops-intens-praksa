@@ -15,4 +15,9 @@ Upraditi deploy apia na bilo koji cloud provider, moze i docker / kubernetes lok
 
 Implemetirati CI CD koristeci GitHub Actions, potrebno je kreirati dve ci cd skripte. Prva skripta treba da se pokrece automatski prilikom kreiranja PR nad master granom i treba da izvrsi testove. 2. skripta treba da se pokrece automatski prilikom pusha na master granu i treba da izvrsava build apia, pakovanje i odlaganje docker slike na repo po zelji i zamenu stare za novu sliku na odabranom cloud provideru ili lokalu. 
 
-Na email poslati url vaseg git repoa kao i url otpremljenog apia na cloud provider ili lokalni url.
+
+
+NAPOMENA:
+
+Resenje poslednjeg zahteva:
+U datoteci .github u workflows datoteci nalaze se dva fajla. U prvom fajlu "CI-CD" je napisana prva skripta, a u drugom fajlu "CI-CD-2" je napisana druga skripta.
