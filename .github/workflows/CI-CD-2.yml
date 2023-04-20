@@ -1,0 +1,26 @@
+name: CI CD
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build API
+      run: npm install && npm run build
+    - name: Package API
+      run: npm pack
+    - name: Push image
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        REPOSITORY_NAME: zeljana/intens-praksa
+        TAG: latest
+      run: 
+        docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        docker tag my-image $DOCKER_USERNAME/$REPOSITORY_NAME:$TAG
+        docker push $DOCKER_USERNAME/$REPOSITORY_NAME:$TAG
