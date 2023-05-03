@@ -1,0 +1,22 @@
+{
+  "name": "intens-api-2022-master",
+  "version": "1.0.0",
+  "description": "Intens Api DevOps",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeljanazegarac/intens-api-2022-master.git"
+  },
+  "keywords": [
+    "["
+  ],
+  "author": "Zeljana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zeljanazegarac/intens-api-2022-master/issues"
+  },
+  "homepage": "https://github.com/zeljanazegarac/intens-api-2022-master#readme"
+}
