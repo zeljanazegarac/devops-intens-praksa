@@ -6,10 +6,10 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     defaults:
       run:
-        shell: powershell
+        shell: bash
     env:
       CI: true
     container:
@@ -23,8 +23,8 @@ jobs:
         with:
           java-version: 11
 
-      - name: Check Windows version
-        run: systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
+      - name: Check Ubuntu version
+        run: lsb_release -a
 
       - name: Set up Docker Buildx
         id: buildx
