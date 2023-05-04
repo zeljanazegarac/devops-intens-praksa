@@ -27,6 +27,9 @@ jobs:
         uses: docker/setup-buildx-action@v1
         with:
           distribution: "ubuntu"
+          - name: Check Ubuntu version
+            run: lsb_release -a
+
 
 
       - name: Build with Maven
