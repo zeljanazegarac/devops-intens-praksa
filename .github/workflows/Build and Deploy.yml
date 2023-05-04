@@ -38,6 +38,7 @@ jobs:
           context: .
           push: true
           tags: zeljana/intens-praksa:latest
+          distribution: "auto"
 
       - name: Deploy Docker image
         uses: appleboy/ssh-action@master
