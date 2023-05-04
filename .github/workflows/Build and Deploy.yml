@@ -61,7 +61,11 @@ jobs:
       - name: Deploy Docker image
         uses: appleboy/ssh-action@master
         with:
-          ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          ssh-key: ${{ secrets.b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+QyNTUxOQAAACCxIJnkkTt1j7MJVqZ/pvUNSfRoPEQHenK1Y6ETTFzEVQAAAKCQDolVkA6J
+VQAAAAtzc2gtZWQyNTUxOQAAACCxIJnkkTt1j7MJVqZ/pvUNSfRoPEQHenK1Y6ETTFzEVQ
+AAAEAehTCcWdMCrWCt3RlxwpnaSuEn9meqoYF/pjYVJzS1HbEgmeSRO3WPswlWpn+m9Q1J
+9Gg8RAd6crVjoRNMXMRVAAAAFnlvdXItZW1haWxAZXhhbXBsZS5jb20BAgMEBQYH }}
           host: 192.168.1.1
           username: zeljanazegarac
           script: |
