@@ -1,3 +1,6 @@
-FROM openjdk:8-jdk-alpine
-COPY target/intens-api-2022-master.jar app.jar
+FROM adoptopenjdk/openjdk11:alpine-jre
+VOLUME /tmp
+EXPOSE 8080
+ARG JAR_FILE=target/*.jar
+COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
