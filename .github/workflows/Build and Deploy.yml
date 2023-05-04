@@ -23,10 +23,11 @@ jobs:
         with:
           java-version: 11
       
-      - name: Install lsb-release
+      - name: Install lsb-release and sudo
         run: |
-          sudo apt-get update
-          sudo apt-get install -y lsb-release
+            apt-get update
+            apt-get install -y lsb-release sudo
+
 
       - name: Check Ubuntu version
         run: lsb_release -a
