@@ -47,7 +47,7 @@ jobs:
     
       - name: Set up Docker Buildx
         id: buildx
-        uses: docker/setup-buildx-action@v20.10.24
+        uses: docker/setup-buildx-action@v1.6.1
         with:
           driver-opts: >
             network=host
