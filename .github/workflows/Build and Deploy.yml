@@ -25,14 +25,15 @@ jobs:
       
       - name: Install lsb-release
         run: |
-          apt-get update
-          apt-get install -y lsb-release
+          sudo apt-get update
+          sudo apt-get install -y lsb-release
 
       - name: Check Ubuntu version
         run: lsb_release -a
 
       - name: Install Maven
-        run: apt-get update && apt-get install -y maven
+        run: |
+          sudo apt-get update && sudo apt-get install -y maven
 
       - name: Set up Docker Buildx
         id: buildx
