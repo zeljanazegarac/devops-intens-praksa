@@ -15,11 +15,6 @@ jobs:
     container:
       image: "node:16"
     steps:
-      - name: Update system and install Maven
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y maven
-
       - name: Checkout code
         uses: actions/checkout@v2
 
@@ -35,6 +30,9 @@ jobs:
 
       - name: Check Ubuntu version
         run: lsb_release -a
+
+      - name: Install Maven
+        run: apt-get update && apt-get install -y maven
 
       - name: Set up Docker Buildx
         id: buildx
