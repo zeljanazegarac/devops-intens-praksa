@@ -36,7 +36,10 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+<<<<<<< HEAD
 		<finalName>intens-api-2022-master</finalName>
+=======
+>>>>>>> 3f1c1f4b7a1faa784bfe359ce2340f9f2b1ca4be
 	</build>
 
 </project>
