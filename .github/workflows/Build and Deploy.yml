@@ -12,8 +12,6 @@ jobs:
         shell: bash
     env:
       CI: true
-    container:
-      image: "node:16"
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -24,12 +22,12 @@ jobs:
           java-version: 11
 
       - name: Check Ubuntu version
-        run: lsb_release -a
+        run: cat /etc/lsb-release
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
         with:
-          distribution: "ubuntu"
+          driver-options: network=host
 
       - name: Build with Maven
         run: mvn -B clean package
